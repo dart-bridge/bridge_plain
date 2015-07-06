@@ -1,0 +1,16 @@
+.buildlog
+.pub/
+build/
+packages
+.env
+
+# dart2js
+*.dart.js
+*.js_
+*.js.deps
+*.js.map
+
+pubspec.lock
+
+cupid.log
+.cupid_history
