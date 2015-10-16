@@ -1,6 +1,6 @@
 part of app;
 
-class ExampleServiceProvider implements ServiceProvider {
+class ExampleServiceProvider extends ServiceProvider {
   Program program;
 
   Future setUp() async {
@@ -22,8 +22,7 @@ class ExampleServiceProvider implements ServiceProvider {
   }
 
   @Command('Say hello to someone')
-  @Option(#name, 'Who to say hello to')
-  say_hello_to(String name) {
+  say_hello_to(@Option('Who to say hello to') String name) {
     program.printInfo('Hello, $name');
   }
 }
